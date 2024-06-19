@@ -2,7 +2,7 @@ import "./App.css";
 import logo from "./assets/netflix.png";
 import data from "./assets/movies.json";
 import Section from "./components/Section";
-// console.log(data);
+console.log(data);
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
         <img className="logo" src={logo} alt="logo-netflix" />
       </h1>
       {data.map((section, index) => {
-        return <Section key={index} section={section.category} />;
+        // console.log(section); // {category: 'Reprendre avec', images: Array(27)}
+        return <Section key={index} section={section} />;
       })}
     </>
   );
